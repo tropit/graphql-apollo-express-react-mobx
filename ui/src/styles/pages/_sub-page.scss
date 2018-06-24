@@ -1,0 +1,94 @@
+.posts {
+    min-width: 960px;
+    max-width: 1060px;
+    padding: 48px 24px;
+    margin: 0 auto;
+    .error {
+        color: red;
+        text-transform: capitalize;
+        margin-left: 46px;
+        font-size: 0.707em;
+        display: inline-block;
+    }
+    h1 {
+        color: #000;
+        font-weight: 700;
+        margin-bottom: 9px;
+    }
+    .subheader {
+        @extend h4;
+        font-weight: 300;
+    }
+    .subpage__container {
+        width: 100%;
+        display: flex;
+        flex-flow: row wrap;
+        color: #FFFFFF;
+        .subpage__container__box {
+            margin-bottom: 10px;
+            margin-right: 10px;
+            height: 210px;
+            width: 220px;
+            box-shadow: 1px 1px 1px grey;
+            border-radius: 4px;
+            background-color: $secondary;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            opacity: 0;
+            transition: opacity 200ms;
+            &.subpage__container__box--show {
+                opacity: 1;
+            }
+            .purple {
+                color: purple;
+            }
+            .button {
+                user-select: none;
+                color: $light;
+            }
+        }
+    }
+    ul {
+        display: flex;
+        flex-flow: row wrap;
+        li {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            flex: 0 1 auto;
+            margin-right: 36px;
+            width: calc(50% - 36px);
+            margin-bottom: 36px;
+            a {
+                display: block;
+                font-weight: 700;
+                margin-bottom: 12px;
+                h1 {
+                    @extend h4;
+                    line-height: 1.2;
+                    &::first-letter {
+                        text-transform: uppercase;
+                    }
+                }
+            }
+            p {
+                font-weight: 400;
+                &::first-letter {
+                    text-transform: uppercase;
+                }
+            }
+        }
+    }
+    @media screen and (max-width: 960px) {
+    	min-width: 100%;
+    	max-width: 100%;
+    	padding: 48px 24px;
+    	ul li {
+    		flex: 0 1 auto;
+    		width: 100%;
+            margin-right: 0;
+    	}
+    }
+}

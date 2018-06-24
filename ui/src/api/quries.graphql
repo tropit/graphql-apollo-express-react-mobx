@@ -1,0 +1,57 @@
+#import './fragments.graphql'
+
+# SUPER POWER
+query superPower_getAll {
+  result: superPowers {
+  ...SuperPowerInfo
+  }
+}
+mutation superPower_add ($input: addSuperPowerInput!) {
+  result: AddSuperPower(input: $input) {
+    id,
+    error
+  }
+}
+mutation superPower_update ($input: updateSuperPowerInput!) {
+  result: UpdateSuperPower(input: $input) {
+    id,
+    error
+  }
+}
+mutation superPower_delete ($input: deleteSuperPowerInput!) {
+  result: DeleteSuperPower(input: $input) {
+    status,
+    error
+  }
+}
+
+
+# SUPER HERO
+query superHero_getAll {
+  result: superHeroes {
+    ...SuperHeroInfo
+  }
+}
+query superHero_getByName {
+  result: superHeroesByName(name: $name) {
+    ...SuperHeroInfo
+  }
+}
+mutation superHero_add ($input: addSuperHeroInput!) {
+  result: AddSuperHero(input: $input) {
+    id,
+    error
+  }
+}
+mutation superHero_update ($input: updateSuperHeroInput!) {
+  result: UpdateSuperHero(input: $input) {
+    id,
+    error
+  }
+}
+mutation superHero_delete ($input: deleteSuperHeroInput!) {
+  result: DeleteSuperHero(input: $input) {
+    status,
+    error
+  }
+}

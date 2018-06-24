@@ -1,0 +1,9 @@
+{
+  "parser": "babel-eslint",
+  "rules": {
+    "import/no-nodejs-modules": "allow",
+    "import/no-namespace": "allow",
+    "no-invalid-this": "off",
+    "curly": "off"
+  }
+}

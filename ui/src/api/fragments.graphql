@@ -1,0 +1,20 @@
+fragment SuperPowerInfo on SuperPower {
+  id
+  name
+  rank
+
+  owners {
+    id
+    name
+    email
+  }
+}
+fragment SuperHeroInfo on SuperHero {
+  id
+  name
+  email
+  superPower {
+    id
+    name
+  }
+}
